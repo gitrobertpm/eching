@@ -457,7 +457,7 @@ button:disabled {
 	top: -25px;
 	left: 0px;
 	right: 0px;
-	bottom: 0px;
+	height: 100%;
 	display: none;
 	background: white;
 	z-index: 99;
