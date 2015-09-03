@@ -458,7 +458,7 @@ footer p {
 /* END FOOTER ***********************/
 
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 460px) {
 	#mainDiv {
 		min-height: 225px;
 	}
@@ -467,14 +467,14 @@ footer p {
 		position: absolute;
 		top: 10px;
 		left: 50%;
-		margin-left: -251px;
+		margin-left: -252px;
 	}
 	
 	#buttonWrap {
 		position: absolute;
 		top: 25px;
 		left: 50%;
-		margin-left: 1px;
+		margin-left: 2px;
 	}
 	
 	button {
