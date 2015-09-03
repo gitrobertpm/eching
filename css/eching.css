@@ -230,7 +230,7 @@ header h1 span {
 }
 
 #coinHexWrap {
-	display: inline-block !important;
+	/* display: inline-block !important; */
 	background: rgb(255,255,250);
 	width: 100%;
 	height: 200px;
@@ -293,10 +293,10 @@ header h1 span {
 }
 
 #buttonWrap {
-	display: inline-block !important;
+	/* display: inline-block !important; */
 	width: 100%;
 	max-width: 250px;
-	height: 200px;
+	/* height: 200px; */
 	margin: auto auto 5px;
 }
 
@@ -457,6 +457,32 @@ footer p {
 }
 /* END FOOTER ***********************/
 
+
+@media screen and (min-width: 550px) {
+	#mainDiv {
+		min-height: 225px;
+	}
+	
+	#coinHexWrap {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		margin-left: -255px;
+	}
+	
+	#buttonWrap {
+		position: absolute;
+		top: 25px;
+		left: 50%;
+		margin-left: 15px;
+	}
+	
+	button {
+		height: 39px;
+	}
+}
+
+
 @media screen and (min-width: 1000px) {
 	#mainDiv {
 		padding-top: 100px;
@@ -464,7 +490,7 @@ footer p {
 	
 	#coinHexWrap {
 		position: realtive;
-		display: block;
+		/* display: block; */
 		max-width: 500px;
 		height: 420px;
 		margin-left: -300px;
@@ -492,7 +518,7 @@ footer p {
 	
 	#buttonWrap {
 		position: absolute;
-		display: block;
+		/* display: block; */
 		margin-top: 15px;
 		margin-left:50px;
 	}
