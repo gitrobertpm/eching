@@ -4,19 +4,6 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 
-// // OPEN NAV
-// document.getElementById("navIcon").onclick = function() {
-	// document.getElementById("navIcon").style.display = "none";
-	// document.getElementById("closeNav").style.display = "block";
-	// document.getElementsByTagName("nav")[0].style.display = "block";
-// };
-
-// // CLOSE NAV
-// document.getElementById("closeNav").onclick = function() {
-	// document.getElementById("navIcon").style.display = "block";
-	// document.getElementById("closeNav").style.display = "none";
-	// document.getElementsByTagName("nav")[0].style.display = "none";
-// };
 
 // SHORTCUT FUNCIOTN FOR GRABBING ID AND SETTING BACKGROUND AND DISPLAY VALUES
 function set(idee, background, display, bs, br, bp) {
@@ -28,6 +15,56 @@ function set(idee, background, display, bs, br, bp) {
 	setIdee.style.backgroundPosition = bp;
 };
 
+
+// SET INTIAL BUTTON STATES
+document.getElementById("coinButton").disabled = false;
+document.getElementById("hexButton").disabled = true;
+document.getElementById("readButton").disabled = true;
+document.getElementById("againButton").disabled = true;
+document.getElementById("noEnter").disabled = false;
+document.getElementById("beginButton").disabled = false;
+
+
+
+// INTRO SECTION BUTTONS
+var introDiv = document.getElementById("introDiv");
+var noDiv = document.getElementById("noDiv");
+
+
+document.getElementById("introYes").onclick = function() {
+	introDiv.style.display = "none";
+	instructionDiv.style.display = "block";
+};
+
+document.getElementById("introNo").onclick = function() {
+	introDiv.style.display = "none";
+	noDiv.style.display = "block";
+};
+
+
+// NO SECTION
+document.getElementById("noEnter").onclick = function() {
+	instructionDiv.style.display = "block";
+	noDiv.style.display = "none";
+};
+
+document.getElementById("noExit").onclick = function() {
+	window.location = "https://www.google.com";
+};
+
+// BEGIN BUTTON
+document.getElementById("beginButton").onclick = function() {
+	instructionDiv.style.display = "none";
+	document.getElementById("mainDiv").style.display = "block";
+	document.getElementById("mainDiv").style.webkitAnimation = "hexFade 1.5s ease-in forwards";
+	document.getElementById("mainDiv").style.animation = "hexFade 1.5s ease-in forwards";
+	if (width > 899) {
+		document.getElementsByTagName("footer")[0].setAttribute("style", "position: absolute; top: 360px; width: 252px; left: 50%;margin-left: 150px; color: rgba(200,200,200,0.7); background: rgba(50,50,50,0.5); padding-left: 5px; padding-right: 5px; border-radius: 2.5px");
+	}
+};
+
+
+// SET COIN IMAGES
 var backgrounds1 = ["url('img/background1.jpg')", "url('img/background2.jpg')", "url('img/background3.jpg')"];
 var backgrounds2 = ["url('img/background11.jpg')", "url('img/background22.jpg')", "url('img/background33.jpg')"];
 var backgrounds3 = ["url('img/background111.jpg')", "url('img/background222.jpg')", "url('img/background333.jpg')"];
@@ -42,34 +79,7 @@ set("hexButton", backgrounds3[ranBack2], "block", "100% auto", "no-repeat");
 set("readButton", backgrounds3[ranBack1], "block", "100% auto", "no-repeat");
 set("againButton", backgrounds3[ranBack3], "block", "100% auto", "no-repeat");
 
-// set("heads1", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-// set("tails1", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-
-// set("heads2", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-// set("tails2", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-
-// set("heads3", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-// set("tails3", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-
-// SET NAV ICON IMAGE
-// set("navIcon", "url('img/nav.png')", "block", "100% 100%", "no-repeat");
-
-// SET NAV LINK ICONS
-// set("navGithubLink", "url('img/github.png')", "block", "50px 50px", "no-repeat", "center");
-// set("navLinkedinLink", "url('img/linkedin.png')", "block", "50px 50px", "no-repeat", "center");
-
-// SET FOOTER LINK ICONS
-// set("footerGithubLink", "url('img/github.png')", "block", "50px 50px", "no-repeat", "center");
-// set("footerLinkedinLink", "url('img/linkedin.png')", "block", "50px 50px", "no-repeat", "center"); 
-
-//document.getElementById("coinButton").disabled = false;
-
-
-document.getElementById("coinButton").disabled = false;
-document.getElementById("hexButton").disabled = true;
-document.getElementById("readButton").disabled = true;
-document.getElementById("againButton").disabled = true;
-
+// ANIMATE COINS
 var coinWrap = document.getElementsByClassName("coinWrap");
 
 document.getElementById("coinButton").onclick = function() {
@@ -88,6 +98,7 @@ document.getElementById("coinButton").onclick = function() {
 };
 
 
+// CREATE HEXAGRAM
 var hex = [];
 hex.reverse();
 
@@ -132,6 +143,96 @@ document.getElementById("hexButton").onclick = function() {
 	document.getElementById("readButton").disabled = false;
 };
 
+
+// CLOSE HEXAGRAM INFO
+document.getElementById("closeHexInfo").onclick = function() {
+	hexInfo.style.display = "none";
+	hexInfoWrap.style.display = "none";
+	document.getElementsByTagName("footer")[0].style.display = "block";
+	
+	document.getElementById("readButton").disabled = true;
+	document.getElementById("againButton").disabled = false;
+	
+	if (width > 899) {
+		document.getElementsByTagName("footer")[0].setAttribute("style", "position: absolute; top: 360px; width: 252px; left: 50%;margin-left: 150px; color: rgba(200,200,200,0.7); background: rgba(50,50,50,0.5); padding-left: 5px; padding-right: 5px; border-radius: 2.5px");
+	}
+};
+
+
+// RESET I CHING ANIMATIONS AND HEXIGRAMS AND GO AGAIN
+document.getElementById("againButton").onclick = function() {
+	for (var cc = 0; cc < coinWrap.length; cc++) {
+		coinWrap[cc].style.webkitAnimation = "none";
+		coinWrap[cc].style.animation = "none";
+	}
+	
+	for (var x = 0; x < 6; x++) {
+		hex.pop();
+		lineTotal.pop();
+	}
+	
+	for (var xx = 0; xx < 3; xx++) {
+		tri1.pop();
+		tri2.pop();
+	}
+	
+	var hexNode = document.getElementById("hex");
+	while (hexNode.firstChild) {
+		hexNode.removeChild(hexNode.firstChild);
+	}
+	
+	var ranBackAgain1 = Math.floor(Math.random() * backgrounds1.length);
+	var ranBackAgain2 = Math.floor(Math.random() * backgrounds1.length);
+	var ranBackAgain3 = Math.floor(Math.random() * backgrounds1.length);
+	set("coinHexWrap", backgrounds1[ranBackAgain1], "block", "100% 100%", "no-repeat");
+	set("hexInfo", backgrounds2[ranBackAgain2], "none", "contain", "no-repeat");
+	set("coinButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
+	set("hexButton", backgrounds3[ranBackAgain2], "block", "100% auto", "no-repeat");
+	set("readButton", backgrounds3[ranBackAgain3], "block", "100% auto", "no-repeat");
+	set("againButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
+	
+	document.getElementById("coinButton").disabled = false;
+	document.getElementById("againButton").disabled = true;
+	
+	instructionDiv.style.display = "block";
+	document.getElementById("mainDiv").style.display = "none";
+	document.getElementById("mainDiv").style.webkitAnimation = "none";
+	document.getElementById("mainDiv").style.animation = "none";
+	
+	if (width > 899) {
+		document.getElementsByTagName("footer")[0].setAttribute("style", "position: realtive; top: auto; width: auto; left: auto; margin-left: auto; color: rgba(200,200,200,0.7); background: auto; padding-left: 5px; padding-right: 5px; border-radius: none");
+	}
+};
+
+
+// CHANGE FOOTER QUESTION MARK IMAGE
+var qMark = document.getElementById("qMark");
+
+document.getElementById("footerInfo").onmouseover = function() {
+	qMark.setAttribute("src", "img/redqMark.png");
+};
+
+document.getElementById("footerInfo").onmouseout = function() {
+	qMark.setAttribute("src", "img/qMark.png");
+};
+
+
+// INFO SECTION
+var infoDiv = document.getElementById("infoDiv");
+
+document.getElementById("footerInfo").onclick = function() {
+	infoDiv.style.display = "block";
+	// introDiv.style.display = "none";
+	// instructionDiv.style.display = "none";
+	// noDiv.style.display = "none";
+};
+
+document.getElementById("closeInfoDiv").onclick = function() {
+	infoDiv.style.display = "none";
+};
+	
+
+// READ HEXAGRAM INFO
 var hexInfo = document.getElementById("hexInfo");
 var hexIcon = document.getElementById("hexIcon");
 var hexNumber = document.getElementById("hexNumber");
@@ -146,7 +247,9 @@ var triName2;
 document.getElementById("readButton").onclick = function() {
 	hexInfo.style.display = "block";
 	hexInfoWrap.style.display = "block";
+	// document.getElementById("maindiv").style.display = "none";
 	
+	document.getElementsByTagName("footer")[0].style.display = "none";
 	document.getElementById("readButton").disabled = true;
 	
 	if (tri1[0] == 7 || tri1[0] == 9) {
@@ -674,50 +777,4 @@ document.getElementById("readButton").onclick = function() {
 			hexAnchor.setAttribute("href", "http://ichingfortune.com/hexagrams/58.php");
 		}
 	}
-};
-
-
-document.getElementById("closeHexInfo").onclick = function() {
-	hexInfo.style.display = "none";
-	hexInfoWrap.style.display = "none";
-	
-	document.getElementById("readButton").disabled = true;
-	document.getElementById("againButton").disabled = false;
-};
-
-
-
-document.getElementById("againButton").onclick = function() {
-	for (var cc = 0; cc < coinWrap.length; cc++) {
-		coinWrap[cc].style.webkitAnimation = "none";
-		coinWrap[cc].style.animation = "none";
-	}
-	
-	for (var x = 0; x < 6; x++) {
-		hex.pop();
-		lineTotal.pop();
-	}
-	
-	for (var xx = 0; xx < 3; xx++) {
-		tri1.pop();
-		tri2.pop();
-	}
-	
-	var hexNode = document.getElementById("hex");
-	while (hexNode.firstChild) {
-		hexNode.removeChild(hexNode.firstChild);
-	}
-	
-	var ranBackAgain1 = Math.floor(Math.random() * backgrounds1.length);
-	var ranBackAgain2 = Math.floor(Math.random() * backgrounds1.length);
-	var ranBackAgain3 = Math.floor(Math.random() * backgrounds1.length);
-	set("coinHexWrap", backgrounds1[ranBackAgain1], "block", "100% 100%", "no-repeat");
-	set("hexInfo", backgrounds2[ranBackAgain2], "none", "contain", "no-repeat");
-	set("coinButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
-	set("hexButton", backgrounds3[ranBackAgain2], "block", "100% auto", "no-repeat");
-	set("readButton", backgrounds3[ranBackAgain3], "block", "100% auto", "no-repeat");
-	set("againButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
-	
-	document.getElementById("coinButton").disabled = false;
-	document.getElementById("againButton").disabled = true;
 };
