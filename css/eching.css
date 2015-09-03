@@ -458,7 +458,7 @@ footer p {
 /* END FOOTER ***********************/
 
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 500px) {
 	#mainDiv {
 		min-height: 225px;
 	}
