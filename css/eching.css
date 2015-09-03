@@ -141,7 +141,7 @@ header h1 span {
 }
 
 .introH11 {
-	/* margin-left: -50px; */
+	
 }
 
 .introH12 {
@@ -183,7 +183,6 @@ header h1 span {
 	height: 60px;
 	border: 7.5px solid white;
 	border-radius: 50%;
-	/* transform: rotate(180deg); */
 }
 
 #noDiv {
@@ -205,7 +204,6 @@ header h1 span {
 }
 
 #instructionDiv h1 {
-	/* font-family: 'MedievalSharp', cursive; */
 	font-family: 'Macondo Swash Caps', cursive;
 	font-style: italic;
 	font-size: 4em;
@@ -216,9 +214,7 @@ header h1 span {
 
 #instructionDiv h1 span {
 	font-family: 'MedievalSharp', cursive;
-	/* font-family: 'Macondo Swash Caps', cursive; */
 	font-size: 1.2em;
-	/* color: white; */
 }
 
 #instructionDiv h2 {
@@ -468,19 +464,15 @@ button:disabled {
 }
 
 #infoDiv h1 {
-	/* font-family: 'MedievalSharp', cursive; */
 	font-family: 'Macondo Swash Caps', cursive;
 	font-style: italic;
 	font-size: 4em;
 	padding-top: 25px;
-	/* color: ivory; */
 }
 
 #infoDiv h1 span {
 	font-family: 'MedievalSharp', cursive;
-	/* font-family: 'Macondo Swash Caps', cursive; */
 	font-size: 1.2em;
-	/* color: white; */
 }
 
 #yyShadow {
@@ -508,22 +500,10 @@ footer {
 	background: black;
 }
 
-/* #footerWrap {
-	position: relative;
-} */
-
-footer a {
-	/* position: absolute;
-	top: 10px;
-	width: 50px;
-	height: 50px; */
-}
-
 #footerInfo {
 	width: 50px;
 	margin: auto auto 10px;
 	cursor: pointer;
-	/* -webkit-transition-duration: .5s;transition-duration: .5s; */
 }
 
 #footerInfo p {
@@ -531,28 +511,16 @@ footer a {
 	font-size: 1.25em;
 	color: ivory;
 	cursor: pointer;
-	/* -webkit-transition-duration: .5s;transition-duration: .5s; */
 }
 
 #footerInfo:hover > p {
 	color: rgb(200,15,15);
-	/* -webkit-transition-duration: .5s;transition-duration: .5s; */
 }
 
 footer img {
 	width: 25px;
 	height: 25px;
 }
-
-/* #footerGithubLink {
-	left: 10px;
-	margin-bottom: 10px;
-}
-
-#footerLinkedinLink {
-	right: 10px;
-	margin-bottom: 10px;
-} */
 
 footer p {
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -648,7 +616,7 @@ footer p {
 		line-height: 40px;
 	}
 	
-	/* footer {
+	footer {
 		position: absolute;
 		top: 360px;
 		width: 252px;
@@ -659,5 +627,5 @@ footer p {
 		padding-left: 5px;
 		padding-right: 5px;
 		border-radius: 2.5px;
-	} */
+	}
 }
