@@ -230,7 +230,6 @@ header h1 span {
 }
 
 #coinHexWrap {
-	/* display: inline-block !important; */
 	background: rgb(255,255,250);
 	width: 100%;
 	height: 200px;
@@ -293,10 +292,8 @@ header h1 span {
 }
 
 #buttonWrap {
-	/* display: inline-block !important; */
 	width: 100%;
 	max-width: 250px;
-	/* height: 200px; */
 	margin: auto auto 5px;
 }
 
@@ -370,8 +367,7 @@ button:disabled {
 	font-family: 'Macondo Swash Caps', cursive;
 	font-size: 1.25em;
 	width: 90%;
-	max-width: 420px;
-	line-height: 30px;
+	max-width: 550px;
 	margin: 10px auto 25px;
 	line-height: 35px;
 }
@@ -406,9 +402,16 @@ button:disabled {
 	border-bottom: 1px solid lightgrey;
 }
 
+#hexInfo cite {
+	font-family: 'Macondo Swash Caps', cursive;
+	margin-top: 35px;
+	line-height: 30px;
+}
+
 #closeHexInfo {
 	color: white;
 	font-size: 2em;
+	height: 48px;
 	background: black;
 	margin: 10px auto 15px;
 }
@@ -483,17 +486,16 @@ footer p {
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
 	#mainDiv {
 		padding-top: 100px;
 	}
 	
 	#coinHexWrap {
-		position: realtive;
-		/* display: block; */
 		max-width: 500px;
 		height: 420px;
-		margin-left: -300px;
+		top: 100px;
+		margin-left: -400px;
 	}
 	
 	#hex {
@@ -511,16 +513,14 @@ footer p {
 	
 	#allCoinWrap {
 		position: absolute;
-		top: 475px;
+		top: 350px;
 		margin-top: 0px;
 		margin-left: 135px;
 	}
 	
 	#buttonWrap {
-		position: absolute;
-		/* display: block; */
-		margin-top: 15px;
-		margin-left:50px;
+		top: 115px;
+		margin-left: 150px;
 	}
 	
 	button {
@@ -537,6 +537,11 @@ footer p {
 	
 	#hexInfo {
 		margin-top: -10px;
+	}
+	
+	#hexInfo p {
+		font-size: 1.5em;
+		line-height: 40px;
 	}
 	
 	footer {
