@@ -450,50 +450,6 @@ button:disabled {
 /* END I CHING COINS, HEXAGRAMS, AND INFO SECTION ****************************/
 
 
-/* INFO SECTION *********************************/
-#infoDiv {
-	position: absolute;
-	display: none;
-	top: -25px;
-	left: 0px;
-	right: 0px;
-	height: 100%;
-	display: none;
-	background: white;
-	z-index: 99;
-}
-
-#infoDiv h1 {
-	font-family: 'Macondo Swash Caps', cursive;
-	font-style: italic;
-	font-size: 4em;
-	padding-top: 25px;
-}
-
-#infoDiv h1 span {
-	font-family: 'MedievalSharp', cursive;
-	font-size: 1.2em;
-}
-
-#yyShadow {
-	width: 225px;
-	height: 50px;
-	margin: -20px auto auto;
-	background: radial-gradient(rgba(0,0,0,0.7), transparent, transparent, transparent);
-	border-radius: 50%;
-}
-
-.infoP {
-	font-family: 'Macondo Swash Caps', cursive;
-	font-size: 1.1em;
-	line-height: 30px;
-	margin: 15px auto;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-/* END INFO SECTION ***********/
-
-
 /* FOOTER ***********************/
 footer {
 	padding-top: 15px;

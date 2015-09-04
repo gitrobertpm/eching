@@ -203,12 +203,13 @@ document.getElementById("againButton").onclick = function() {
 
 // CHANGE FOOTER QUESTION MARK IMAGE
 var qMark = document.getElementById("qMark");
+var footerInfo = document.getElementById("footerInfo");
 
-document.getElementById("footerInfo").onmouseover = function() {
+footerInfo.onmouseover = function() {
 	qMark.setAttribute("src", "img/redqMark.png");
 };
 
-document.getElementById("footerInfo").onmouseout = function() {
+footerInfo.onmouseout = function() {
 	qMark.setAttribute("src", "img/qMark.png");
 };
 
@@ -217,14 +218,7 @@ document.getElementById("footerInfo").onmouseout = function() {
 var infoDiv = document.getElementById("infoDiv");
 
 document.getElementById("footerInfo").onclick = function() {
-	infoDiv.style.display = "block";
-	// introDiv.style.display = "none";
-	// instructionDiv.style.display = "none";
-	// noDiv.style.display = "none";
-};
-
-document.getElementById("closeInfoDiv").onclick = function() {
-	infoDiv.style.display = "none";
+	window.open("info.html");
 };
 	
 
