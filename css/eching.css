@@ -383,8 +383,7 @@ button:disabled {
 	padding-bottom: 75px;
 	background: rgb(255,255,240);
 	z-index: 9;
-	opacity: 0;
-	-webkit-animation: pFadeIn .5s ease-in forwards;animation: pFadeIn .5s ease-in forwards;
+	
 }
 
 #hexInfo {
@@ -417,6 +416,8 @@ button:disabled {
 	max-width: 550px;
 	margin: 10px auto 25px;
 	line-height: 35px;
+	opacity: 0;
+	-webkit-animation: pFadeIn .5s ease-in forwards;animation: pFadeIn .5s ease-in forwards;
 }
 
 #hexInfo p:nth-of-type(1) {
