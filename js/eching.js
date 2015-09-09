@@ -109,6 +109,17 @@ coinButton.onclick = function() {
 };
 
 
+// CLOSE HEXAGRAM INFO
+document.getElementById("closeHexInfo").onclick = function() {
+	hexInfo.style.display = "none";
+	hexInfoWrap.style.display = "none";
+	document.getElementsByTagName("footer")[0].style.display = "block";
+	
+	readButton.disabled = true;
+	againButton.disabled = false;
+};
+
+
 // CREATE HEXAGRAM
 var hex = [];
 hex.reverse();
@@ -194,10 +205,6 @@ document.getElementById("againButton").onclick = function() {
 	mainDiv.style.display = "none";
 	mainDiv.style.webkitAnimation = "none";
 	mainDiv.style.animation = "none";
-	
-	// if (width > 899) {
-		// document.getElementsByTagName("footer")[0].setAttribute("style", "position: realtive; top: auto; width: auto; left: auto; margin-left: auto; color: rgba(200,200,200,0.7); background: auto; padding-left: 5px; padding-right: 5px; border-radius: none");
-	// }
 };
 
 
@@ -766,14 +773,4 @@ document.getElementById("readButton").onclick = function() {
 			hexAnchor.setAttribute("href", "http://ichingfortune.com/hexagrams/58.php");
 		}
 	}
-};
-
-// CLOSE HEXAGRAM INFO
-document.getElementById("closeHexInfo").onclick = function() {
-	hexInfo.style.display = "none";
-	hexInfoWrap.style.display = "none";
-	document.getElementsByTagName("footer")[0].style.display = "block";
-	
-	readButton.disabled = true;
-	againButton.disabled = false;
 };
