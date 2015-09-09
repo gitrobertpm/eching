@@ -1,15 +1,154 @@
+/* CANVASS CSS */
+
+/* DESIGNED FOR SMALL SCREENS FIRST */
+/* STYLING FOR MEDIUM AND LARGE SCREENS BELOW IN MEDIA QUERRIES */
+
+
+/* GENERAL RESETS AND STYLINGS**********************************************************/
+*, *:before, *:after {
+	/* UNIVERSAL BOX-SIZING - SET WIDTH TO INCLUDE PADDING AND BORDER */
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1em;
+	position: relative;
+	text-align: center;
+	background: black;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html,
+body,
+header,
+section,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+q,
+em,
+cite,
+span,
+footer {
+	margin: 0;
+	padding: 0
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: rgb(125,0,0);
+	outline: none;
+	-webkit-transition-duration: .5s;transition-duration: .5s;
+	/* MORE ANCHOR STYLINGS BELOW IN SECTIONS */
+}
+
+a:active, a:focus, a:hover {
+	color: rgb(200,0,0);
+	-webkit-transition-duration: .5s;transition-duration: .5s;
+}
+
+p {
+	/* color: rgb(50,50,50); */
+	cursor: default;
+}
+
+q {
+	display: block;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-style: italic;
+	color: rgb(150,0,0);
+	width: 95%;
+	max-width: 700px;
+	margin: 10px auto;
+	padding: 10px;
+	border-radius: 2.5px;
+	cursor: default;
+}
+
+q span {
+	color: rgb(75,0,0);
+}
+
+q:active, q:focus, q:hover {
+	background: rgba(255,255,255,0.4);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2), -5px 5px 5px rgba(0,0,0,0.2);
+	-webkit-transition-duration: .5s;transition-duration: .5s;
+}
+
+cite {
+	font-family: 'Macondo Swash Caps', cursive;
+	margin-top: 35px;
+	line-height: 30px;
+	font-style: normal;
+	margin-top: 15px;
+	cursor: default;
+}
+
+cite span {
+	color: rgb(150,0,0);
+}
+
+hr {
+	width: 90%;
+	max-width: 675px;
+	border-radius: 50%;
+	margin: 25px;
+}
+/* END GENERAL *********************************/
+
 body {
 	background: white;
+	text-align: center;
+}
+
+button {
+	position: fixed;
+	top: 5px;
+	left: 50%;
+	margin-left: -125px;
+	display: block;
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.275em;
+	width: 250px;
+	padding: 5px;
+	background: rgba(255,255,240, 0.9);
+	border: 1px solid white;
+	border-bottom: 1px solid darkgrey;
+	border-radius: 2.5px;
+	cursor: pointer;
+	-webkit-transition-duration: .5s;transition-duration: .5s;
+	z-index: 999;
+}
+
+button:active, button:focus, button:hover {
+	color: rgb(200,15,15);
+	box-shadow: 2px 2px 0px rgb(200,200,200);
+}
+
+button:disabled {
+	color: rgba(200,200,200,0.7);
+	background: rgba(50,50,50,0.5) !important;
+	box-shadow: none;
+	border: 1px solid white;
+	border-bottom: 1px solid darkgrey;
+	cursor: default;
 }
 
 /* INFO SECTION *********************************/
 #infoDiv {
-	/* position: absolute;
-	top: -25px;
-	left: 0px;
-	right: 0px;
-	height: 100%; */
 	background: white;
+	padding-top: 25px;
 }
 
 #infoDiv h1 {
@@ -32,12 +171,43 @@ body {
 	border-radius: 50%;
 }
 
+#infoDiv h2 {
+	font-family: 'MedievalSharp', cursive;
+	font-size: 2.25em;
+	color: rgb(200,15,15);
+	margin: 25px auto;
+	max-width: 650px;
+	border-bottom: 5px double black;
+}
+
+
 .infoP {
 	font-family: 'Macondo Swash Caps', cursive;
 	font-size: 1.1em;
 	line-height: 30px;
-	margin: 15px auto;
+	text-align: justify;
+	max-width: 650px;
+	margin: 35px auto;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 /* END INFO SECTION ***********/
+
+footer {
+	padding-top: 15px;
+	background: black;
+	color: rgb(125,125,125);
+}
+
+#footerInfo {
+	width: 50px;
+	margin: auto auto 10px;
+	cursor: pointer;
+}
+
+#footerInfo p {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.25em;
+	color: ivory;
+	cursor: pointer;
+}

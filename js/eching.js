@@ -218,7 +218,7 @@ footerInfo.onmouseout = function() {
 var infoDiv = document.getElementById("infoDiv");
 
 document.getElementById("footerInfo").onclick = function() {
-	window.open("info.html");
+	window.location = "info.html";
 };
 	
 

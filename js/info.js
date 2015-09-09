@@ -1,3 +1,4 @@
 document.getElementById("closeInfoButton").onclick = function() {
-	window.close();
+	//window.close();
+	history.back(-1);
 };
