@@ -111,33 +111,6 @@ hr {
 /* END GENERAL *********************************/
 
 
-/* HEADER ************************************/
-header {
-	position: relative;
-}
-
-header h1 {
-	font-family: 'MedievalSharp', cursive;
-	font-style: italic;
-	font-size: 2.1em;
-	color: ivory;
-}
-
-header h1 span {
-	font-family: Impact, Charcoal, sans-serif;
-	font-size: 1.2em;
-	color: white;
-}
-
-.subTitle {
-	font-family: "Times New Roman", Times, serif;
-	font-style: italic;
-	font-size: 1.25em;
-	margin: 100px auto 50px;
-}
-/* END HEADER ***********************/
-
-
 /* INTRO SECTION **********************************************************/
 .introH1 {
 	font-family: 'MedievalSharp', cursive;
@@ -553,6 +526,7 @@ footer p {
 	}
 	/* M - END INTRO SECTION **************/
 	
+	/* M - MAIN SECTION **************/
 	#mainDiv {
 		min-height: 225px;
 	}
@@ -574,6 +548,7 @@ footer p {
 	button {
 		height: 39px;
 	}
+	/* M - END MAIN SECTION **************/
 }
 
 /* LARGER SCREENS */
