@@ -4,19 +4,66 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 
-// // OPEN NAV
-// document.getElementById("navIcon").onclick = function() {
-	// document.getElementById("navIcon").style.display = "none";
-	// document.getElementById("closeNav").style.display = "block";
-	// document.getElementsByTagName("nav")[0].style.display = "block";
-// };
 
-// // CLOSE NAV
-// document.getElementById("closeNav").onclick = function() {
-	// document.getElementById("navIcon").style.display = "block";
-	// document.getElementById("closeNav").style.display = "none";
-	// document.getElementsByTagName("nav")[0].style.display = "none";
-// };
+// BUTTON SHORTCUTS
+var introYes = document.getElementById("introYes");
+var introNo = document.getElementById("introNo");
+var noEnter = document.getElementById("noEnter");
+var noExit = document.getElementById("noExit");
+var beginButton = document.getElementById("beginButton");
+var coinButton = document.getElementById("coinButton");
+var hexButton = document.getElementById("hexButton");
+var readButton = document.getElementById("readButton");
+var closeHexInfo = document.getElementById("closeHexInfo");
+var againButton = document.getElementById("againButton");
+
+// SET INTIAL BUTTON STATES
+coinButton.disabled = false;
+hexButton.disabled = true;
+readButton.disabled = true;
+againButton.disabled = true;
+noEnter.disabled = false;
+beginButton.disabled = false;
+
+
+// INTRO SECTION BUTTONS
+var introDiv = document.getElementById("introDiv");
+var noDiv = document.getElementById("noDiv");
+
+
+introYes.onclick = function() {
+	introDiv.style.display = "none";
+	instructionDiv.style.display = "block";
+};
+
+introNo.onclick = function() {
+	introDiv.style.display = "none";
+	noDiv.style.display = "block";
+};
+
+
+// NO SECTION
+noEnter.onclick = function() {
+	instructionDiv.style.display = "block";
+	noDiv.style.display = "none";
+};
+
+noExit.onclick = function() {
+	window.location = "https://www.google.com";
+};
+
+
+// BEGIN BUTTON
+var mainDiv = document.getElementById("mainDiv");
+var instructionDiv = document.getElementById("instructionDiv");
+
+beginButton.onclick = function() {
+	instructionDiv.style.display = "none";
+	mainDiv.style.display = "block";
+	mainDiv.style.webkitAnimation = "hexFade 1.5s ease-in forwards";
+	mainDiv.style.animation = "hexFade 1.5s ease-in forwards";
+};
+
 
 // SHORTCUT FUNCIOTN FOR GRABBING ID AND SETTING BACKGROUND AND DISPLAY VALUES
 function set(idee, background, display, bs, br, bp) {
@@ -28,6 +75,7 @@ function set(idee, background, display, bs, br, bp) {
 	setIdee.style.backgroundPosition = bp;
 };
 
+// SET COIN IMAGES
 var backgrounds1 = ["url('img/background1.jpg')", "url('img/background2.jpg')", "url('img/background3.jpg')"];
 var backgrounds2 = ["url('img/background11.jpg')", "url('img/background22.jpg')", "url('img/background33.jpg')"];
 var backgrounds3 = ["url('img/background111.jpg')", "url('img/background222.jpg')", "url('img/background333.jpg')"];
@@ -42,37 +90,10 @@ set("hexButton", backgrounds3[ranBack2], "block", "100% auto", "no-repeat");
 set("readButton", backgrounds3[ranBack1], "block", "100% auto", "no-repeat");
 set("againButton", backgrounds3[ranBack3], "block", "100% auto", "no-repeat");
 
-// set("heads1", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-// set("tails1", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-
-// set("heads2", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-// set("tails2", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-
-// set("heads3", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-// set("tails3", "url('img/coinFlip.png')", "block", "675px 75px", "no-repeat");
-
-// SET NAV ICON IMAGE
-// set("navIcon", "url('img/nav.png')", "block", "100% 100%", "no-repeat");
-
-// SET NAV LINK ICONS
-// set("navGithubLink", "url('img/github.png')", "block", "50px 50px", "no-repeat", "center");
-// set("navLinkedinLink", "url('img/linkedin.png')", "block", "50px 50px", "no-repeat", "center");
-
-// SET FOOTER LINK ICONS
-// set("footerGithubLink", "url('img/github.png')", "block", "50px 50px", "no-repeat", "center");
-// set("footerLinkedinLink", "url('img/linkedin.png')", "block", "50px 50px", "no-repeat", "center"); 
-
-//document.getElementById("coinButton").disabled = false;
-
-
-document.getElementById("coinButton").disabled = false;
-document.getElementById("hexButton").disabled = true;
-document.getElementById("readButton").disabled = true;
-document.getElementById("againButton").disabled = true;
-
+// ANIMATE COINS
 var coinWrap = document.getElementsByClassName("coinWrap");
 
-document.getElementById("coinButton").onclick = function() {
+coinButton.onclick = function() {
 
 	coinWrap[0].style.webkitAnimation = "coinSpin 1.5s 1 steps(23) forwards, coinFlip 1.5s";
 	coinWrap[0].style.animation = "coinSpin 1.5s 1 steps(23) forwards, coinFlip 1.5s";
@@ -83,11 +104,12 @@ document.getElementById("coinButton").onclick = function() {
 	setTimeout(function(){ coinWrap[2].style.webkitAnimation = "coinSpin 1.5s 1 steps(23) forwards, coinFlip 1.5s"; }, 200);
 	setTimeout(function(){ coinWrap[2].style.animation = "coinSpin 1.5s 1 steps(23) forwards, coinFlip 1.5s"; }, 200);
 	
-	document.getElementById("hexButton").disabled = false;
-	document.getElementById("coinButton").disabled = true;
+	hexButton.disabled = false;
+	coinButton.disabled = true;
 };
 
 
+// CREATE HEXAGRAM
 var hex = [];
 hex.reverse();
 
@@ -128,10 +150,79 @@ document.getElementById("hexButton").onclick = function() {
 	tri1.push(lineTotal[3],lineTotal[4],lineTotal[5]);
 	tri2.push(lineTotal[0],lineTotal[1],lineTotal[2]);
 	
-	document.getElementById("hexButton").disabled = true;
-	document.getElementById("readButton").disabled = false;
+	hexButton.disabled = true;
+	readButton.disabled = false;
 };
 
+
+// RESET I CHING ANIMATIONS AND HEXIGRAMS AND GO AGAIN
+document.getElementById("againButton").onclick = function() {
+	for (var cc = 0; cc < coinWrap.length; cc++) {
+		coinWrap[cc].style.webkitAnimation = "none";
+		coinWrap[cc].style.animation = "none";
+	}
+	
+	for (var x = 0; x < 6; x++) {
+		hex.pop();
+		lineTotal.pop();
+	}
+	
+	for (var xx = 0; xx < 3; xx++) {
+		tri1.pop();
+		tri2.pop();
+	}
+	
+	var hexNode = document.getElementById("hex");
+	while (hexNode.firstChild) {
+		hexNode.removeChild(hexNode.firstChild);
+	}
+	
+	var ranBackAgain1 = Math.floor(Math.random() * backgrounds1.length);
+	var ranBackAgain2 = Math.floor(Math.random() * backgrounds1.length);
+	var ranBackAgain3 = Math.floor(Math.random() * backgrounds1.length);
+	set("coinHexWrap", backgrounds1[ranBackAgain1], "block", "100% 100%", "no-repeat");
+	set("hexInfo", backgrounds2[ranBackAgain2], "none", "contain", "no-repeat");
+	set("coinButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
+	set("hexButton", backgrounds3[ranBackAgain2], "block", "100% auto", "no-repeat");
+	set("readButton", backgrounds3[ranBackAgain3], "block", "100% auto", "no-repeat");
+	set("againButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
+	
+	coinButton.disabled = false;
+	againButton.disabled = true;
+	
+	instructionDiv.style.display = "block";
+	mainDiv.style.display = "none";
+	mainDiv.style.webkitAnimation = "none";
+	mainDiv.style.animation = "none";
+	
+	// if (width > 899) {
+		// document.getElementsByTagName("footer")[0].setAttribute("style", "position: realtive; top: auto; width: auto; left: auto; margin-left: auto; color: rgba(200,200,200,0.7); background: auto; padding-left: 5px; padding-right: 5px; border-radius: none");
+	// }
+};
+
+
+// CHANGE FOOTER QUESTION MARK IMAGE
+var qMark = document.getElementById("qMark");
+var footerInfo = document.getElementById("footerInfo");
+
+footerInfo.onmouseover = function() {
+	qMark.setAttribute("src", "img/redqMark.png");
+};
+
+footerInfo.onmouseout = function() {
+	qMark.setAttribute("src", "img/qMark.png");
+};
+
+
+// INFO SECTION
+var infoDiv = document.getElementById("infoDiv");
+
+document.getElementById("footerInfo").onclick = function() {
+	window.location = "info.html";
+};
+	
+
+// READ HEXAGRAM INFO
 var hexInfo = document.getElementById("hexInfo");
 var hexIcon = document.getElementById("hexIcon");
 var hexNumber = document.getElementById("hexNumber");
@@ -147,7 +238,8 @@ document.getElementById("readButton").onclick = function() {
 	hexInfo.style.display = "block";
 	hexInfoWrap.style.display = "block";
 	
-	document.getElementById("readButton").disabled = true;
+	document.getElementsByTagName("footer")[0].style.display = "none";
+	readButton.disabled = true;
 	
 	if (tri1[0] == 7 || tri1[0] == 9) {
 		if (tri1[1] == 7 || tri1[1] == 9) {
@@ -676,48 +768,12 @@ document.getElementById("readButton").onclick = function() {
 	}
 };
 
-
+// CLOSE HEXAGRAM INFO
 document.getElementById("closeHexInfo").onclick = function() {
 	hexInfo.style.display = "none";
 	hexInfoWrap.style.display = "none";
+	document.getElementsByTagName("footer")[0].style.display = "block";
 	
-	document.getElementById("readButton").disabled = true;
-	document.getElementById("againButton").disabled = false;
-};
-
-
-
-document.getElementById("againButton").onclick = function() {
-	for (var cc = 0; cc < coinWrap.length; cc++) {
-		coinWrap[cc].style.webkitAnimation = "none";
-		coinWrap[cc].style.animation = "none";
-	}
-	
-	for (var x = 0; x < 6; x++) {
-		hex.pop();
-		lineTotal.pop();
-	}
-	
-	for (var xx = 0; xx < 3; xx++) {
-		tri1.pop();
-		tri2.pop();
-	}
-	
-	var hexNode = document.getElementById("hex");
-	while (hexNode.firstChild) {
-		hexNode.removeChild(hexNode.firstChild);
-	}
-	
-	var ranBackAgain1 = Math.floor(Math.random() * backgrounds1.length);
-	var ranBackAgain2 = Math.floor(Math.random() * backgrounds1.length);
-	var ranBackAgain3 = Math.floor(Math.random() * backgrounds1.length);
-	set("coinHexWrap", backgrounds1[ranBackAgain1], "block", "100% 100%", "no-repeat");
-	set("hexInfo", backgrounds2[ranBackAgain2], "none", "contain", "no-repeat");
-	set("coinButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
-	set("hexButton", backgrounds3[ranBackAgain2], "block", "100% auto", "no-repeat");
-	set("readButton", backgrounds3[ranBackAgain3], "block", "100% auto", "no-repeat");
-	set("againButton", backgrounds3[ranBackAgain1], "block", "100% auto", "no-repeat");
-	
-	document.getElementById("coinButton").disabled = false;
-	document.getElementById("againButton").disabled = true;
+	readButton.disabled = true;
+	againButton.disabled = false;
 };

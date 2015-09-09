@@ -77,7 +77,7 @@ q {
 }
 
 q span {
-	color: rgb(75,0,0);
+	color: rgb(200,15,15);
 }
 
 q:active, q:focus, q:hover {
@@ -88,13 +88,19 @@ q:active, q:focus, q:hover {
 
 cite {
 	font-style: normal;
-	padding: 10px;
 	margin-top: 15px;
 	cursor: default;
 }
 
 cite span {
 	color: rgb(150,0,0);
+	font-size: 1.1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 175px;
+	border-bottom: 5px double black;
 }
 
 hr {
@@ -103,97 +109,6 @@ hr {
 	border-radius: 50%;
 }
 /* END GENERAL *********************************/
-
-
-/* NAV ******************************/
-/* #navIcon {
-	position: fixed;
-	top: 10px;
-	left: 10px;
-	width: 75px;
-	height: 40px;
-	cursor: pointer;
-	z-index: 9999;
-}
-
-
-nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: none;
-	background: rgba(0,0,0,0.9);
-	z-index: 9999;
-}
-
-nav a {
-	color: rgb(255,240,240);
-	width: 75px;
-	height: 50px;
-	margin: auto;
-}
-
-nav p {
-	color: rgb(255,240,240);
-	font-size: 1.25em;
-	padding-top: 75px;
-	padding-bottom: 25px;
-}
-
-nav ul {
-	padding-left: 0;
-}
-
-nav ul li {
-	list-style: none;
-	margin: 10px auto;
-}
-
-nav ul li:nth-of-type(1),
-nav ul li:nth-of-type(2) {
-	display: inline-block;
-}
-
-nav q span {
-	color: rgb(255,240,240);
-}
-
-nav cite {
-	color: rgb(255,240,240);
-}
-
-#closeNav {
-	display: none;
-	position: fixed;
-	top: 10px;
-	right: 10px;
-	width: 35px;
-	height: 35px;
-	background: rgb(125,0,0);
-	border-top: 1px solid rgb(200,0,0);
-	border-left: 1px solid rgb(200,0,0);
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	cursor: pointer;
-	z-index: 999999;
-}
-
-#closeNav p {
-	color: rgb(255,100,100);
-	line-height: 30px;
-	font-size: 1.25em;
-	font-weight: bold;
-	cursor: pointer;
-	-webkit-transition-duration: .5s;transition-duration: .5s;
-}
-
-#closeNav p:active, #closeNav p:focus, #closeNav p:hover {
-	color: ivory;
-	-webkit-transition-duration: .5s;transition-duration: .5s;
-} */
-/* END NAV ******************/
 
 
 /* HEADER ************************************/
@@ -223,14 +138,138 @@ header h1 span {
 /* END HEADER ***********************/
 
 
-#mainDiv {
-	position: relative;
-	/* opacity: 0; */
-	/* display: none; */
+/* INTRO SECTION **********************************************************/
+.introH1 {
+	font-family: 'MedievalSharp', cursive;
+	font-size: 3.5em;
+	color: ivory;
+	margin: 40px auto auto;
 }
 
+.introH11 {
+	
+}
+
+.introH12 {
+	text-indent: 65px;
+}
+
+.introP {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.5em;
+	color: ivory;
+	margin: 25px auto;
+	opacity: 0;
+	-webkit-animation: pFadeIn 2.25s ease-in forwards;animation: pFadeIn 2.25s ease-in forwards;
+}
+
+@-webkit-keyframes pFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes pFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.introP1 {
+	margin-left: -125px;
+}
+
+.introP2 {
+	margin-left: -40px;
+}
+
+#introDiv img {
+	position: absolute;
+	left: 50%;
+	margin-left: -135px;
+	margin-top: 5px;
+	width: 60px;
+	height: 60px;
+	border: 7.5px solid white;
+	border-radius: 50%;
+}
+
+#introDiv button {
+	opacity: 0;
+	-webkit-animation: pFadeIn 2.5s ease-in forwards;animation: pFadeIn 2.5s ease-in forwards;
+}
+
+#noDiv {
+	display: none;
+}
+
+.noP {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.5em;
+	color: ivory;
+	margin: 35px auto;
+}
+/* END INTRO SECTION **************/
+
+
+/* INSTRUCTION SECTION *************************************/
+#instructionDiv {
+	display: none;
+}
+
+#instructionDiv h1 {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-style: italic;
+	font-size: 4em;
+	color: ivory;
+	padding-top: 25px;
+	/* color: ivory; */
+}
+
+#instructionDiv h1 span {
+	font-family: 'MedievalSharp', cursive;
+	font-size: 1.2em;
+}
+
+#instructionDiv  img {
+	width: 50px;
+	height: 50px;
+}
+
+#instructionDiv h2 {
+	font-family: 'MedievalSharp', cursive;
+	color: rgb(200,15,15);
+}
+
+.instructionP {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.25em;
+	line-height: 30px;
+	color: ivory;
+	margin: 15px auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	opacity: 0;
+	-webkit-animation: pFadeIn 2s ease-in forwards;animation: pFadeIn 2s ease-in forwards;
+}
+/* END INSTRUCTION SECTION ***********/
+
+
+/* I CHING COINS, HEXAGRAM, AND READING ***********************************/
+#mainDiv {
+	position: relative;
+	opacity: 0;
+	display: none;
+}
+
+@-webkit-keyframes hexFade {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes hexFade {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* COINS */
 #coinHexWrap {
-	/* display: inline-block !important; */
 	background: rgb(255,255,250);
 	width: 100%;
 	height: 200px;
@@ -274,6 +313,7 @@ header h1 span {
 	100% { -webkit-transform: translate(0px, 0px); transform: translate(0px, 0px); }
 }
 
+/* HEXAGRAM */
 #hex {
 	display: block;
 	text-align: center;
@@ -290,13 +330,14 @@ header h1 span {
 	width: 100%;
 	height: 17.5px;
 	margin: 7.5px auto;
+	opacity: 0;
+	-webkit-animation: pFadeIn 1s ease-in forwards;animation: pFadeIn 1s ease-in forwards;
 }
 
+/* BUTTONS */
 #buttonWrap {
-	/* display: inline-block !important; */
 	width: 100%;
 	max-width: 250px;
-	/* height: 200px; */
 	margin: auto auto 5px;
 }
 
@@ -331,6 +372,7 @@ button:disabled {
 	cursor: default;
 }
 
+/* HEXAGRAM DETAILS */
 #hexInfoWrap {
 	position: absolute;
 	display: none;
@@ -341,6 +383,8 @@ button:disabled {
 	padding-bottom: 75px;
 	background: rgb(255,255,240);
 	z-index: 9;
+	opacity: 0;
+	-webkit-animation: pFadeIn .5s ease-in forwards;animation: pFadeIn .5s ease-in forwards;
 }
 
 #hexInfo {
@@ -370,8 +414,7 @@ button:disabled {
 	font-family: 'Macondo Swash Caps', cursive;
 	font-size: 1.25em;
 	width: 90%;
-	max-width: 420px;
-	line-height: 30px;
+	max-width: 550px;
 	margin: 10px auto 25px;
 	line-height: 35px;
 }
@@ -406,9 +449,16 @@ button:disabled {
 	border-bottom: 1px solid lightgrey;
 }
 
+#hexInfo cite {
+	font-family: 'Macondo Swash Caps', cursive;
+	margin-top: 35px;
+	line-height: 30px;
+}
+
 #closeHexInfo {
 	color: white;
 	font-size: 2em;
+	height: 48px;
 	background: black;
 	margin: 10px auto 15px;
 }
@@ -419,7 +469,7 @@ button:disabled {
 	border: 1px solid white;
 	border-bottom: 1px solid darkgrey;
 }
-
+/* END I CHING COINS, HEXAGRAMS, AND INFO SECTION ****************************/
 
 
 /* FOOTER ***********************/
@@ -428,37 +478,80 @@ footer {
 	background: black;
 }
 
-#footerWrap {
-	position: relative;
-}
-
-footer a {
-	position: absolute;
-	top: 10px;
+#footerInfo {
 	width: 50px;
-	height: 50px;
+	margin: auto auto 10px;
+	cursor: pointer;
 }
 
-#footerGithubLink {
-	left: 10px;
-	margin-bottom: 10px;
+#footerInfo p {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.25em;
+	color: ivory;
+	cursor: pointer;
 }
 
-#footerLinkedinLink {
-	right: 10px;
-	margin-bottom: 10px;
+#footerInfo:hover > p {
+	color: rgb(200,15,15);
+}
+
+footer img {
+	width: 25px;
+	height: 25px;
 }
 
 footer p {
 	font-family: "Arial Black", Gadget, sans-serif;
-	color: ivory;
+	color: rgba(200,200,200,0.7);
 	font-size: .9em;
 	line-height: 20px;
 }
 /* END FOOTER ***********************/
 
 
-@media screen and (min-width: 550px) {
+/* MEDIA QUERYS */
+/* LANDSCAPE AND MEDIUM SCREENS */
+@media screen and (min-width: 460px) {	
+	/* M - INTRO SECTION **********************************************************/
+	.introH1 {
+		font-size: 3.5em;
+		padding: 40px auto auto;
+	}
+
+	.introH11 {
+		
+	}
+
+	.introH12 {
+		text-indent: 75px;
+	}
+
+	.introP {
+		font-size: 1.5em;
+		padding: 35px auto;
+	}
+
+	.introP1 {
+		margin-left: -200px;
+	}
+
+	.introP2 {
+		margin-left: 125px;
+	}
+
+	#introDiv img {
+		margin-left: -125px;
+		/* margin-top: -5px; */
+		width: 60px;
+		height: 60px;
+	}
+
+	.noP {
+		font-size: 1.5em;
+		padding: 35px auto;
+	}
+	/* M - END INTRO SECTION **************/
+	
 	#mainDiv {
 		min-height: 225px;
 	}
@@ -467,14 +560,14 @@ footer p {
 		position: absolute;
 		top: 10px;
 		left: 50%;
-		margin-left: -255px;
+		margin-left: -252px;
 	}
 	
 	#buttonWrap {
 		position: absolute;
 		top: 25px;
 		left: 50%;
-		margin-left: 15px;
+		margin-left: 2px;
 	}
 	
 	button {
@@ -482,18 +575,109 @@ footer p {
 	}
 }
 
+/* LARGER SCREENS */
+@media screen and (min-width: 900px) {
+	/* L - INTRO SECTION **********************************************************/
+	.introH1 {
+		font-size: 4.5em;
+		margin-top: 0px;
+		padding: 40px auto auto;
+	}
 
-@media screen and (min-width: 1000px) {
+	.introH11 {
+		margin-left: -200px;
+	}
+
+	.introH12 {
+		text-indent: 45px;
+		padding-top: 75px;
+		margin-left: -115px;
+		margin-top: 0px;
+		padding-bottom: -150px;
+	}
+
+	.introP {
+		font-size: 2em;
+		margin: 0px auto;
+		padding: 35px auto;
+	}
+
+	.introP1 {
+		padding-top: 140px;
+		padding-bottom: 10px;
+		margin-left: -420px;
+	}
+
+	.introP2 {
+		margin-left: -100px;
+	}
+
+	#introDiv img {
+		top: 420px;
+		margin-left: -240px;
+		margin-top: -40px;
+		width: 75px;
+		height: 75px;
+		border-width: 10px;
+	}
+	
+	#introDiv button {
+		height: 70px;
+	}
+	
+	#introDiv button:nth-of-type(2) {
+		margin-top: -25px;
+	}
+	
+	#introButtonWrap {
+		position: absolute;
+		top: 150px;
+		left: 50%;
+		width: 250px;
+		margin-left: 150px;
+	}
+
+	.noP {
+		font-size: 1.5em;
+		padding: 35px auto;
+	}
+	
+	.noP:nth-of-type(1) {
+		padding-top: 133px;
+		margin: 0px auto;
+	}
+	/* L - END INTRO SECTION **************/
+	
+	
+	/* L - INSTRUCTION SECTION **************/
+	#instructionDiv h1 {
+		font-size: 5em;
+	}
+
+	#instructionDiv h1 span {
+		font-size: 1.3em;
+	}
+	
+	#instructionDiv h2 {
+		font-size: 2em;
+	}
+
+	.instructionP {
+		font-size: 1.35em;
+	}
+	/* L - END INSTRUCTION SECTION **************/
+	
+	
+	/* L - MAIN SECTION **************/
 	#mainDiv {
 		padding-top: 100px;
 	}
 	
 	#coinHexWrap {
-		position: realtive;
-		/* display: block; */
 		max-width: 500px;
 		height: 420px;
-		margin-left: -300px;
+		top: 100px;
+		margin-left: -400px;
 	}
 	
 	#hex {
@@ -511,16 +695,14 @@ footer p {
 	
 	#allCoinWrap {
 		position: absolute;
-		top: 475px;
+		top: 350px;
 		margin-top: 0px;
 		margin-left: 135px;
 	}
 	
 	#buttonWrap {
-		position: absolute;
-		/* display: block; */
-		margin-top: 15px;
-		margin-left:50px;
+		top: 115px;
+		margin-left: 150px;
 	}
 	
 	button {
@@ -539,10 +721,17 @@ footer p {
 		margin-top: -10px;
 	}
 	
+	#hexInfo p {
+		font-size: 1.5em;
+		line-height: 40px;
+	}
+	/* L - END MAIN SECTION **************/
+	
+	
 	footer {
 		position: absolute;
-		top: 420px;
-		width: 250px;
+		top: 360px;
+		width: 252px;
 		left: 50%;
 		margin-left: 150px;
 		color: rgba(200,200,200,0.7);
