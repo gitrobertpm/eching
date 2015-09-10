@@ -182,33 +182,33 @@ hr {
 /* END INTRO SECTION **************/
 
 
-/* INSTRUCTION SECTION *************************************/
-#instructionDiv {
+/* COIN SECTION *************************************/
+#coinDiv {
 	display: none;
 }
 
-#instructionDiv h1 {
+#coinDiv h1 {
 	font-family: 'Macondo Swash Caps', cursive;
 	font-style: italic;
 	font-size: 4em;
 	color: ivory;
 	padding-top: 25px;
-	/* color: ivory; */
 }
 
-#instructionDiv h1 span {
+#coinDiv h1 span {
 	font-family: 'MedievalSharp', cursive;
 	font-size: 1.2em;
 }
 
-#instructionDiv  img {
-	width: 50px;
-	height: 50px;
+#coinDiv  img {
+	width: 60px;
+	height: 60px;
 }
 
-#instructionDiv h2 {
+#coinDiv h2 {
 	font-family: 'MedievalSharp', cursive;
 	color: rgb(200,15,15);
+	padding-top: 10px;
 }
 
 .instructionP {
@@ -222,7 +222,64 @@ hr {
 	opacity: 0;
 	-webkit-animation: pFadeIn 2s ease-in forwards;animation: pFadeIn 2s ease-in forwards;
 }
-/* END INSTRUCTION SECTION ***********/
+
+#coinDiv form {
+	font-family: 'Macondo Swash Caps', cursive;
+	font-size: 1.25em;
+	width: 200px;
+	margin: auto;
+	padding: 10px;
+	background: ivory;
+	border-radius: 2.5px;
+}
+
+#coinDiv form label {
+	cursor: pointer;
+	padding-bottom: 50px;
+	-webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+#coinDiv form label:hover {
+	color: rgb(200,15,15);
+}
+
+#coinDiv form label:nth-of-type(1) {
+	background: url('../img/heads.png');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#coinDiv form label:nth-of-type(2) {
+	background: url('../img/coinYY.png');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#coinDiv form input {
+	display: block;
+	cursor: pointer;	
+}
+/* END COIN SECTION ***********/
+
+
+/* INSTRUCTION SECTION */
+#instructionDiv {
+	display: none;
+}
+
+#instructionDiv h2 {
+	font-family: 'MedievalSharp', cursive;
+	color: rgb(200,15,15);
+	font-size: 2.5em;
+	padding-top: 35px;
+}
+
+#instructionDiv p span {
+	color: rgb(200,15,15);
+}
+/* END INSTRUCTION SECTION */
 
 
 /* I CHING COINS, HEXAGRAM, AND READING ***********************************/
@@ -257,9 +314,9 @@ hr {
 	width: 75px;
 	height: 75px;
 	margin: -20px auto 0px;
-	background: url('../img/longFlip.png');
-	background-size: 1900px 65px;
-	background-repeat: no-repeat;
+	background: url('../img/longFlip2.png');
+	background-size: 1900px 65px !important;
+	background-repeat: no-repeat !important;
 }
 
 @-webkit-keyframes coinSpin {
@@ -625,23 +682,31 @@ footer p {
 	/* L - END INTRO SECTION **************/
 	
 	
-	/* L - INSTRUCTION SECTION **************/
-	#instructionDiv h1 {
+	/* L - COIN SECTION **************/
+	#coinDiv h1 {
 		font-size: 5em;
 	}
 
-	#instructionDiv h1 span {
+	#coinDiv h1 span {
 		font-size: 1.3em;
 	}
 	
-	#instructionDiv h2 {
+	#coinDiv h2 {
 		font-size: 2em;
 	}
 
 	.instructionP {
 		font-size: 1.35em;
 	}
-	/* L - END INSTRUCTION SECTION **************/
+	/* L - END COIN SECTION **************/
+	
+	
+	/* INSTRUCTION SECTION */
+	#instructionDiv h2 {
+		font-size: 4em;
+		padding-top: 62px;
+	}
+	/* END INSTRUCTION SECTION */
 	
 	
 	/* L - MAIN SECTION **************/
@@ -654,6 +719,8 @@ footer p {
 		height: 420px;
 		top: 100px;
 		margin-left: -400px;
+		border-left: 1px solid red;
+		border-bottom: 1px solid red;
 	}
 	
 	#hex {

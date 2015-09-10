@@ -10,6 +10,8 @@ var introYes = document.getElementById("introYes");
 var introNo = document.getElementById("introNo");
 var noEnter = document.getElementById("noEnter");
 var noExit = document.getElementById("noExit");
+var continueButton = document.getElementById("continueButton");
+var changeCoinButton = document.getElementById("changeCoinButton");
 var beginButton = document.getElementById("beginButton");
 var coinButton = document.getElementById("coinButton");
 var hexButton = document.getElementById("hexButton");
@@ -17,23 +19,28 @@ var readButton = document.getElementById("readButton");
 var closeHexInfo = document.getElementById("closeHexInfo");
 var againButton = document.getElementById("againButton");
 
+
 // SET INTIAL BUTTON STATES
 coinButton.disabled = false;
 hexButton.disabled = true;
 readButton.disabled = true;
+continueButton.disabled = false;
 againButton.disabled = true;
 noEnter.disabled = false;
 beginButton.disabled = false;
+closeHexInfo.disabled = false;
+changeCoinButton.disabled = false;
 
 
 // INTRO SECTION BUTTONS
 var introDiv = document.getElementById("introDiv");
 var noDiv = document.getElementById("noDiv");
-
+var coinDiv = document.getElementById("coinDiv");
+var instructionDiv = document.getElementById("instructionDiv");
 
 introYes.onclick = function() {
 	introDiv.style.display = "none";
-	instructionDiv.style.display = "block";
+	coinDiv.style.display = "block";
 };
 
 introNo.onclick = function() {
@@ -44,7 +51,7 @@ introNo.onclick = function() {
 
 // NO SECTION
 noEnter.onclick = function() {
-	instructionDiv.style.display = "block";
+	coinDiv.style.display = "block";
 	noDiv.style.display = "none";
 };
 
@@ -53,9 +60,20 @@ noExit.onclick = function() {
 };
 
 
+// COIN SECTION
+continueButton.onclick = function() {
+	coinDiv.style.display = "none";
+	instructionDiv.style.display = "block";
+};
+
+changeCoinButton.onclick = function() {
+	coinDiv.style.display = "block";
+	instructionDiv.style.display = "none";
+};
+
+
 // BEGIN BUTTON
 var mainDiv = document.getElementById("mainDiv");
-var instructionDiv = document.getElementById("instructionDiv");
 
 beginButton.onclick = function() {
 	instructionDiv.style.display = "none";
@@ -75,7 +93,7 @@ function set(idee, background, display, bs, br, bp) {
 	setIdee.style.backgroundPosition = bp;
 };
 
-// SET COIN IMAGES
+// SET BACKGROUND IMAGES
 var backgrounds1 = ["url('img/background1.jpg')", "url('img/background2.jpg')", "url('img/background3.jpg')"];
 var backgrounds2 = ["url('img/background11.jpg')", "url('img/background22.jpg')", "url('img/background33.jpg')"];
 var backgrounds3 = ["url('img/background111.jpg')", "url('img/background222.jpg')", "url('img/background333.jpg')"];
@@ -90,8 +108,20 @@ set("hexButton", backgrounds3[ranBack2], "block", "100% auto", "no-repeat");
 set("readButton", backgrounds3[ranBack1], "block", "100% auto", "no-repeat");
 set("againButton", backgrounds3[ranBack3], "block", "100% auto", "no-repeat");
 
-// ANIMATE COINS
+// SET IMAGES AND ANIMATE COINS
 var coinWrap = document.getElementsByClassName("coinWrap");
+
+document.getElementById("coinClassic").onclick = function() {
+	for (var ccc = 0; ccc < coinWrap.length; ccc++) {
+		coinWrap[ccc].style.background = "url('img/longFlip.png')";
+	}
+};
+
+document.getElementById("coinYY").onclick = function() {
+	for (var ccc = 0; ccc < coinWrap.length; ccc++) {
+		coinWrap[ccc].style.background = "url('img/longFlip2.png')";
+	}
+};
 
 coinButton.onclick = function() {
 
@@ -109,17 +139,6 @@ coinButton.onclick = function() {
 };
 
 
-// CLOSE HEXAGRAM INFO
-document.getElementById("closeHexInfo").onclick = function() {
-	hexInfo.style.display = "none";
-	hexInfoWrap.style.display = "none";
-	document.getElementsByTagName("footer")[0].style.display = "block";
-	
-	readButton.disabled = true;
-	againButton.disabled = false;
-};
-
-
 // CREATE HEXAGRAM
 var hex = [];
 hex.reverse();
@@ -129,7 +148,7 @@ var lineTotal = [];
 var tri1 = [];
 var tri2 = [];
 
-document.getElementById("hexButton").onclick = function() {
+hexButton.onclick = function() {
 	for (var j = 0; j < 6; j++) {
 		hex.push([]); 
 		for (var i = 0; i < 3; i++) {
@@ -163,6 +182,17 @@ document.getElementById("hexButton").onclick = function() {
 	
 	hexButton.disabled = true;
 	readButton.disabled = false;
+};
+
+
+// CLOSE HEXAGRAM INFO
+closeHexInfo.onclick = function() {
+	hexInfo.style.display = "none";
+	hexInfoWrap.style.display = "none";
+	document.getElementsByTagName("footer")[0].style.display = "block";
+	
+	readButton.disabled = true;
+	againButton.disabled = false;
 };
 
 
