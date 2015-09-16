@@ -106,6 +106,7 @@ cite span {
 hr {
 	width: 90%;
 	max-width: 1000px;
+	margin: auto;
 	border-radius: 50%;
 }
 /* END GENERAL *********************************/

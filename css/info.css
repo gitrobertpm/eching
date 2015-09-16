@@ -103,7 +103,7 @@ hr {
 	width: 90%;
 	max-width: 675px;
 	border-radius: 50%;
-	margin: 25px;
+	margin: 25px auto;
 }
 /* END GENERAL *********************************/
 
