@@ -611,7 +611,7 @@ document.getElementById("readButton").onclick = function() {
 			hexNumber.innerHTML = "64. ";
 			hexName.innerHTML = "WEI JI (WEI CHI)";
 			keyWords.innerHTML = "Before completion, continued effort, approaching success, the river not yet crossed"; 
-			description.innerHTML = "The finish line is in sight, but the work isn't done yet.  This time can be dangerous.  Good work can be ruined by hastily rushing towards the end or overlooking unfinished details.  Gaurd against both frustration and bravado.  Focus on patience and caution to keep a probably victory from turning into an embarrassing mishap.";
+			description.innerHTML = "The finish line is in sight, but the work isn't done yet.  This time can be dangerous.  Good work can be ruined by hastily rushing towards the end or overlooking unfinished details.  Gaurd against both frustration and bravado.  Focus on patience and caution to keep a probable victory from turning into an embarrassing mishap.";
 			hexAnchor.setAttribute("href", "http://ichingfortune.com/hexagrams/64.php");
 		} else if (triName2 == "Mountain") {
 			hexIcon.innerHTML = "&#x4DC3;";
