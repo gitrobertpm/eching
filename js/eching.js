@@ -583,7 +583,7 @@ document.getElementById("readButton").onclick = function() {
 			hexNumber.innerHTML = "7. ";
 			hexName.innerHTML = "SHE (SHIH)";
 			keyWords.innerHTML = "Leading, the army, collective energy, gathering your forces"; 
-			description.innerHTML = "There is strength in numbers.  Where one is weak, many are strong.  But that strength can be of little use if untrained, inexpereinced, immoral, and/or mislead.  A bad army can be worse and more harmful than no army at all.  The same can be soaid of a good army with bad leadership.  Loyalty, self-discipline, honorable leadership, and a dedication to the benefit of all are key.";
+			description.innerHTML = "There is strength in numbers.  Where one is weak, many are strong.  But that strength can be of little use if untrained, inexperienced, immoral, and/or mislead.  A bad army can be worse and more harmful than no army at all.  The same can be said of a good army with bad leadership.  Loyalty, self-discipline, honorable leadership, and a dedication to the benefit of all are key.";
 			hexAnchor.setAttribute("href", "http://ichingfortune.com/hexagrams/7.php");
 		} else if (triName2 == "Thunder") {
 			hexIcon.innerHTML = "&#x4DE7;";
